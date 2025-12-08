@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - João Arthur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte moderna -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        /* DARK MODE AUTOMÁTICO */
+        :root {
+            --bg: #f5f5f5;
+            --card: #ffffff;
+            --text: #222;
+            --primary: #007bff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --card: #1a1a1a;
+                --text: #e4e4e4;
+                --primary: #4da3ff;
+                --shadow: rgba(255,255,255,0.07);
+            }
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            transition: background .3s, color .3s;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background: var(--card);
+            padding: 40px 20px;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .perfil-foto {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 6px 18px var(--shadow);
+            transition: .3s;
+        }
+
+        .perfil-foto:hover {
+            transform: scale(1.05);
+        }
+
+        .header-info {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            .header-info {
+                text-align: center;
+            }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        /* SEÇÕES */
+        section {
+            max-width: 900px;
+            margin: 45px auto;
+            background: var(--card);
+            padding: 32px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px var(--shadow);
+            animation: fadeUp .7s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            border-left: 5px solid var(--primary);
+            padding-left: 12px;
+            margin-bottom: 22px;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* GRID DE HABILIDADES */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .skill {
+            background: rgba(0,0,0,0.05);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: .95rem;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .skill:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* GALERIA DE CERTIFICADOS */
+        .cert-gallery {
+            display: grid;
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: var(--card);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px var(--shadow);
+            transition: .3s;
+            text-align: center;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.02);
+        }
+
+        img.certificado {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px var(--shadow);
+            transition: .3s;
+        }
+
+        img.certificado:hover {
+            transform: scale(1.03);
+        }
+
+        /* BOTÃO VOLTAR AO TOPO */
+        .btn-topo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            padding: 14px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            display: none;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text);
+            opacity: .7;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- CABEÇALHO COMPLETO COM FOTO -->
+<header>
+    <div class="header-container">
+
+        <img src="cwe.jpg" 
+             alt="Foto de João Arthur"
+             class="perfil-foto">
+
+        <div class="header-info">
+            <h1>João Arthur</h1>
+            <p>Barbalha - CE • 18 anos</p>
+            <p>Email: joaoarthurmauriti@gmail.com • Tel: 88 98885-7797</p>
+        </div>
+
+    </div>
+</header>
+
+<section>
+    <h2>Resumo</h2>
+    <p>
+        Estudante dedicado, com grande interesse em tecnologia e robótica, e experiência prática no projeto Rotex,
+        um robô autônomo focado na identificação das cores de semáforos e movimentação inteligente.
+    </p>
+    <p>
+        Experiência com C++, Python, resolução de problemas, inteligência artificial (ImageFX Labs, ChatGPT e PixVerse),
+        além de forte atuação em trabalho em equipe e projetos colaborativos.
+    </p>
+    <p>
+        Atualmente cursando Análise e Desenvolvimento de Sistemas e desenvolvendo projetos pessoais.
+    </p>
+
+    <p>
+        Possuo experiência prática com desenvolvimento front-end básico utilizando HTML5 e CSS3, criando interfaces simples, responsivas e bem estruturadas.
+    </p>
+</section>
+
+<section>
+    <h2>Experiência em Projetos</h2>
+
+    <h3>Projeto Rotex – Robô Autônomo Identificador de Semáforos</h3>
+    <p>- Desenvolvimento de parte do código em C++ e Python.</p>
+    <p>- Ajustes para reconhecimento de cores de semáforos.</p>
+    <p>- Solução de problemas de velocidade e controle.</p>
+    <p>- Colaboração ativa com a equipe para superar desafios técnicos.</p>
+
+    <h3>Projetos pessoais</h3>
+    <p>• Aplicativos simples de música.</p>
+    <p>• IA aplicada a criação de imagens, automação e criatividade.</p>
+</section>
+
+<section>
+    <h2>Habilidades</h2>
+    <div class="skills-grid">
+        <div class="skill">C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">Lógica de Programação</div>
+        <div class="skill">Trabalho em Equipe</div>
+        <div class="skill">Resolução de Problemas</div>
+        <div class="skill">ChatGPT</div>
+        <div class="skill">ImageFX Labs</div>
+        <div class="skill">PixVerse</div>
+        <div class="skill">Inteligência Artificial</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+    </div>
+</section>
+
+<section>
+    <h2>Educação</h2>
+    <p><strong>Ensino Médio — CNSF</strong> (Concluído em 2024)</p>
+    <p>Participação no projeto Rotex (robótica).</p>
+
+    <p><strong>ADS — FAP</strong> (Conclusão prevista: 2028)</p>
+</section>
+
+<section>
+    <h2>Certificações</h2>
+
+    <div class="cert-gallery">
+
+        <div class="cert-card">
+            <h3>Udemy — Aprenda HTML e CSS na Prática</h3>
+            <img class="certificado"
+                 src="certificado.jpg"
+                 alt="Certificado Udemy de HTML e CSS">
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 — Desenvolvido por João Arthur
+</footer>
+
+<div class="btn-topo" id="btnTopo">▲</div>
+
+<script>
+    const btn = document.getElementById("btnTopo");
+    window.addEventListener("scroll", () => {
+        btn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+</script>
+
+</body>
+</html>
